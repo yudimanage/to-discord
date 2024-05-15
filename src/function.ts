@@ -6,12 +6,15 @@ export function PostDiscord(body: any, url: string) {
     if (!donator_name) {
         const { email_supporter, supporter, amount, currency, message }: SociabuzzType = body;
         axios.post(url, {
-            content: `||${email_supporter}||`,
+            content: "",
             embeds: [
                 {
-                    title: `${currency} ${amount.toLocaleString()} from ${supporter}`,
+                    title: `||${email_supporter}||`,
                     description: message,
                     color: 7785489,
+                    author: {
+                        name: `${currency} ${amount.toLocaleString()} from ${supporter}`,
+                    },
                 },
             ],
             username: "SociaBuzz",
@@ -22,12 +25,15 @@ export function PostDiscord(body: any, url: string) {
     } else {
         const { donator_email, donator_name, amount_raw, message }: SaweriaType = body;
         axios.post(url, {
-            content: `||${donator_email}||`,
+            content: "",
             embeds: [
                 {
-                    title: `IDR ${amount_raw.toLocaleString()} from ${donator_name}`,
+                    title: `||${donator_email}||`,
                     description: message,
                     color: 16428587,
+                    author: {
+                        name: `IDR ${amount_raw.toLocaleString()} from ${donator_name}`,
+                    },
                 },
             ],
             username: "Saweria",
