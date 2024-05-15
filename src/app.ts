@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.post("/", (req, res) => {
-    const { donator_name } = req.body;
+    const { donator_name }: { donator_name?: string } = req.body;
 
     if (!donator_name) {
         const { email_supporter, supporter, amount, currency, message }: SociabuzzType = req.body;
