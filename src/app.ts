@@ -19,7 +19,10 @@ app.post("/", (req, res) => {
                 {
                     title: `${currency}${amount} from ${supporter}`,
                     description: message,
-                    color: "#76cc11",
+                    color: 7785489,
+                    author: {
+                        name: `||${email_supporter}||`,
+                    },
                 },
             ],
             username: "SociaBuzz",
@@ -30,12 +33,14 @@ app.post("/", (req, res) => {
     } else {
         const { donator_email, donator_name, amount_raw, message }: SaweriaType = req.body;
         axios.post(process.env.DISCORD_URL as string, {
-            content: `||${donator_email}||`,
             embeds: [
                 {
                     title: `IDR${amount_raw} from ${donator_name}`,
                     description: message,
-                    color: "#faae2b",
+                    color: 16428587,
+                    author: {
+                        name: `||${donator_email}||`,
+                    },
                 },
             ],
             username: "Saweria",

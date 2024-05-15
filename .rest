@@ -1,0 +1,16 @@
+POST http://localhost:3000/
+Content-Type: application/json
+
+{
+    "id": "4587376197",
+    "amount": 10000,
+    "currency": "IDR",
+    "amount_settled": 10000,
+    "currency_settled": "IDR",
+    "media_type": "",
+    "media_url": "",
+    "supporter": "Jessica",
+    "email_supporter": "jessica@example.com",
+    "message": "Ini hanya test notifikasi",
+    "created_at": "2024-05-15T11:46:49+07:00"
+}
