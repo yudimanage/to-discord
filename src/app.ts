@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.post("/yong/donate", (req, res) => {
+app.post("/yongs/donate", (req, res) => {
     PostDiscord(
         req.body,
         "https://discord.com/api/webhooks/1240162835284103220/tEzwoacyBsPEc_Q5w7tVPtQETZhndH1t05B599mDvoCE1wHIWr-j-oTz4rjibC_PJ_-S"
