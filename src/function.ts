@@ -9,7 +9,7 @@ export function PostDiscord(body: any, url: string) {
             content: `||${email_supporter}||`,
             embeds: [
                 {
-                    title: `${currency}${amount} from ${supporter}`,
+                    title: `${currency} ${amount.toLocaleString()} from ${supporter}`,
                     description: message,
                     color: 7785489,
                 },
@@ -25,7 +25,7 @@ export function PostDiscord(body: any, url: string) {
             content: `||${donator_email}||`,
             embeds: [
                 {
-                    title: `IDR${amount_raw} from ${donator_name}`,
+                    title: `IDR ${amount_raw.toLocaleString()} from ${donator_name}`,
                     description: message,
                     color: 16428587,
                 },
