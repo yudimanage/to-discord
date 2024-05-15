@@ -19,4 +19,8 @@ app.post("/", (req, res) => {
     });
     res.sendStatus(200);
 });
-app.listen(3000, () => console.log("Server is running!"));
+app.get("/", (req, res) => {
+    res.sendStatus(200);
+});
+app.listen(3000, () => console.log("Server is running!!"));
+exports.default = app;
