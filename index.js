@@ -1,7 +1,6 @@
-import express from "express";
-import { config } from "dotenv";
-import axios from "axios";
-config();
+const express = require("express");
+const axios = require("axios");
+require("dotenv").config();
 
 const app = express();
 
@@ -26,4 +25,4 @@ app.get("/", (req, res) => {
 
 app.listen(3000, () => console.log("Server is running!!"));
 
-export default app;
+module.exports = app;
