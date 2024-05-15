@@ -1,13 +1,14 @@
-const express = require("express");
-const axios = require("axios");
-require("dotenv").config();
+import express from "express";
+import axios from "axios";
+import { config } from "dotenv";
+config();
 
 const app = express();
 
 app.use(express.urlencoded({ extended: false }));
 
 app.post("/", (req, res) => {
-    axios.post(process.env.DISCORD_URL, {
+    axios.post(process.env.DISCORD_URL as string, {
         content: req.body,
         embeds: null,
         username: "Bot",
@@ -25,4 +26,4 @@ app.get("/", (req, res) => {
 
 app.listen(3000, () => console.log("Server is running!!"));
 
-module.exports = app;
+export default app;
