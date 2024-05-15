@@ -1,10 +1,10 @@
 {
     "name": "to-discord",
     "version": "1.0.0",
+    "type": "module",
     "main": "./dist/index.js",
     "scripts": {
-        "dev": "ts-node ./src/index.ts",
-        "start": "node ./dist/index.js"
+        "start": "node index.js"
     },
     "keywords": [],
     "author": "",
@@ -14,8 +14,5 @@
         "axios": "^1.6.8",
         "dotenv": "^16.4.5",
         "express": "^4.19.2"
-    },
-    "devDependencies": {
-        "@types/express": "^4.17.21"
     }
 }
