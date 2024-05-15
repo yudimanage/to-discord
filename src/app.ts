@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.post("/", (req, res) => {
     axios.post(process.env.DISCORD_URL as string, {
-        content: req.body,
+        content: JSON.stringify(req.body),
         embeds: null,
         username: "Bot",
         avatar_url:
